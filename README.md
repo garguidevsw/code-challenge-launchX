@@ -8,8 +8,10 @@
 
 <br>
 
-### Server: Crea API server con endpoints.
+### Server
 <br>
+
+Crea API server con endpoints.
 
 ``` js
 const express = require("express");
@@ -50,9 +52,10 @@ app.listen(port, () => {
 ```
 <br>
 
-### PartnerController: Se encarga de establecer la comunicación entre el server y los servicios. Esta clase lee el archivo json con los visual partners (Reader) y realiza los filtros de información solicitados (PartnerService).
-
+### PartnerController 
 <br>
+
+Se encarga de establecer la comunicación entre el server y los servicios. Esta clase lee el archivo json con los visual partners (Reader) y realiza los filtros de información solicitados (PartnerService).
 
 ``` js
 const Reader = require('./../utils/Reader');
@@ -79,8 +82,10 @@ class PartnerController {
 ```
 <br>
 
-### Reader: Clase que lee el archivo ```visualpartners.json``` que contiene todos los datos.
+### Reader 
 <br>
+
+Clase que lee el archivo ```visualpartners.json``` que contiene todos los datos.
 
 ``` js
 const fs = require("fs");
@@ -94,8 +99,10 @@ class Reader {
 ```
 <br>
 
-### PartnerService: Clase que implementa los filtros ```filterPartnersEmailWithCertification``` y ```filterPartnersCredits```.
+### PartnerService 
 <br>
+
+Clase que implementa los filtros ```filterPartnersEmailWithCertification``` y ```filterPartnersCredits```.
 
 ``` js
 class PartnerService{
