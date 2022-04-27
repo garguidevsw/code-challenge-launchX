@@ -1,0 +1,18 @@
+{
+  "name": "s4-code_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
