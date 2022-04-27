@@ -41,8 +41,6 @@ describe('Test PartnerService', () => {
         const resp = PartnerService.filterPartnersEmailWithCertification(partners);
 
         expect(resp.length).toBe(2);
-        // expect(resp[0].haveCertification).toBeTruthy();
-        // expect(resp[1].haveCertification).toBeTruthy();
     });
 
     test('filter Partners with credits greater than 500', () => {
