@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.14.0",
     "jest": "^28.0.1"
   },
   "dependencies": {
