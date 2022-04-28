@@ -4,9 +4,26 @@
 
 <br>
 
-![componentes](https://res.cloudinary.com/garguidevsw/image/upload/v1651047731/launchx/stuhyaopbkqwxsjrglji.png)
-
-<br>
+```mermaid
+classDiagram
+    PartnerController <|--|> server
+    Reader <|--|> PartnerController
+    PartnerService <|--|> PartnerController
+    class Reader{
+      +readJsonFile(path)
+    }
+    class PartnerService{
+      +filterPartnersEmailWithCertification(partners)
+      +filterPartnersCredits(partners, limit)
+    }
+    class PartnerController{
+      +getAllPartners()
+      +getPartnersEmailWithCertification()
+      +getPartnersCreditsWithLimit(credits)
+    }
+    class server{
+    }
+```
 
 ### Server
 <br>
