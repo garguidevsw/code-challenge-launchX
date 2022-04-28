@@ -105,7 +105,7 @@ describe("Test PartnerService", () => {
 
         const resp = PartnerService.filterPartnersCredits(partners, 500);
 
-        expect(resp.length).toBe(2);
+        expect(resp.length).toBe(0);
     });
 
     test("filter Partners with credits greater than 500 - partners = null", () => {
