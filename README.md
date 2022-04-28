@@ -5,24 +5,11 @@
 <br>
 
 ```mermaid
-classDiagram
-    PartnerController <|--|> server
-    Reader <|--|> PartnerController
-    PartnerService <|--|> PartnerController
-    class Reader{
-      +readJsonFile(path)
-    }
-    class PartnerService{
-      +filterPartnersEmailWithCertification(partners)
-      +filterPartnersCredits(partners, limit)
-    }
-    class PartnerController{
-      +getAllPartners()
-      +getPartnersEmailWithCertification()
-      +getPartnersCreditsWithLimit(credits)
-    }
-    class server{
-    }
+graph TD
+    A[Reader] & B[PartnerService]
+    A --> C[PartnerController]
+    B --> C[PartnerController]
+    C --> D[server]
 ```
 
 ### Server
