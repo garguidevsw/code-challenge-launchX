@@ -28,18 +28,9 @@ classDiagram
 ### Server
 <br>
 
-Crea API server con endpoints.
+Crea API server.
 
 ``` js
-const express = require("express");
-const PartnerController = require("./controllers/PartnerController");
-
-const app = express();
-
-app.use(express.json());
-
-const port = 3000;
-
 app.get("/", (request, response) => {
     response.json({message: "Code Challenge Api welcome!"});
 });
@@ -62,10 +53,6 @@ app.get("/v1/partners/credits/:credits", (request, response) => {
         partners
     });
 });
-
-app.listen(port, () => {
-    console.log(`Code Challenge in localhost:${port}`);
-});
 ```
 <br>
 
@@ -75,9 +62,6 @@ app.listen(port, () => {
 Se encarga de establecer la comunicación entre el server y los servicios. Esta clase lee el archivo json con los visual partners (Reader) y realiza los filtros de información solicitados (PartnerService).
 
 ``` js
-const Reader = require('./../utils/Reader');
-const PartnerService = require("../services/PartnerService");
-
 class PartnerController {
 
     static getAllPartners(){
@@ -105,8 +89,6 @@ class PartnerController {
 Clase que lee el archivo ```visualpartners.json``` que contiene todos los datos.
 
 ``` js
-const fs = require("fs");
-
 class Reader {
     static readJsonFile(path = ""){
         const rawdata = fs.readFileSync(path);
@@ -145,7 +127,7 @@ class PartnerService{
 
 <br>
 
-La documentación de consulta y respuestas de los endpoints generados pueden ser revisados en el siguiente link:
+La documentación de los endpoints puede ser revisada en el siguiente link:
 
 [Postman Documentation](https://documenter.getpostman.com/view/4966394/UyrDDvqd)
 
