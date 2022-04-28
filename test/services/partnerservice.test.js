@@ -43,6 +43,22 @@ describe("Test PartnerService", () => {
         expect(resp.length).toBe(2);
     });
 
+    test("filter Partners with certification - partners = null ", () => {
+        const partners = null;
+
+        const resp = PartnerService.filterPartnersEmailWithCertification(partners);
+
+        expect(resp.length).toBe(0);
+    });
+
+    test("filter Partners with certification - partners = undefined ", () => {
+        const partners = undefined;
+
+        const resp = PartnerService.filterPartnersEmailWithCertification(partners);
+
+        expect(resp.length).toBe(0);
+    });
+
     test("filter Partners with credits greater than 500", () => {
         const partners = [{
             "id": "6264d5d89f1df827eb84bb23",
@@ -83,4 +99,28 @@ describe("Test PartnerService", () => {
 
         expect(resp.length).toBe(2);
     });
+
+    test("filter Partners with credits greater than 500 - partners = undefined", () => {
+        const partners = undefined;
+
+        const resp = PartnerService.filterPartnersCredits(partners, 500);
+
+        expect(resp.length).toBe(2);
+    });
+
+    test("filter Partners with credits greater than 500 - partners = null", () => {
+        const partners = null;
+
+        const resp = PartnerService.filterPartnersCredits(partners, 500);
+
+        expect(resp.length).toBe(0);
+    });
+
+    test("filter Partners with credits - no arguments", () => {
+
+        const resp = PartnerService.filterPartnersCredits();
+
+        expect(resp.length).toBe(0);
+    });
+
 });

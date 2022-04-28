@@ -125,3 +125,4 @@ La documentación de los endpoints puede ser revisada en el siguiente link:
 
 - Jest: Dependencia para pruebas unitarias.
 - Express: Dependencia para facilitar la creación de un API Server.
+- Linter: Dependencia que nos ayuda a seguir buenas prácticas o guías de estilo del código.
